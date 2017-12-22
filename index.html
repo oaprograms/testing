@@ -19,30 +19,29 @@
     crossorigin="anonymous">
   </script>
 	
-  <script>
-	  // fb api
-    (function(d, s, id){
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) {return;}
-	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/sdk.js";
-	fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-	
-  <script>
-	window.fbAsyncInit = function() {
-		FB.init({
-			appId      : '199732977262303',
-			xfbml      : true,
-			version    : 'v2.0'
-		});
-	}
-  </script>
 </head>
 
 
 <body>
+  <script>
+	 window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '199732977262303',
+	      xfbml      : true,
+	      version    : 'v2.11'
+	    });
+	    FB.AppEvents.logPageView();
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "https://connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+  </script>
+	
 	<a class="btn btn-rounded btn-social btn-twitter js-share-on-twitter" href="https://twitter.com/intent/tweet?text=test&url=http%3A%2F%2Ftagorum.com&hashtags=BEOGRADŽIVI">Podeli na Tviteru</a>
 	<a href="#" class="btn btn-rounded btn-social btn-facebook js-share-on-facebook" data-title="Ovaj tekst je za naslove koji idu u dva reda" data-url="http://tagorum.com/" data-lead="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." data-hashtag="BEOGRADŽIVI">Podeli na Fejsbuku</a>
 
